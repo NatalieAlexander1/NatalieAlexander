@@ -1,0 +1,319 @@
+/* 9/19 */
+* { box-sizing: border-box; }
+
+/* Reset some default styles */
+/* 9/14 */
+body, h1 {
+/* h2,
+p,
+ul,
+li { */ 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: tan; */
+  background-image: url(img/bg.jpg);
+  background-size: cover; /* Added to make the background image cover the entire body */
+  background-repeat: no-repeat;
+  color: #555555; 
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* modified 9/14 */
+#wrapper {         
+	background-image: linear-gradient(to bottom, #FFFFFF, skyblue);
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}  
+
+header {
+  background-color: #0e2e61;
+  color: #ffffff;
+  text-align: center;
+  /* 9/21 */
+  /* padding: 10px 0; */
+}
+
+header h1 {
+  padding-top: 10px;
+}
+
+/* 9/21 */
+
+.logo {
+  display: none;
+}
+
+nav {
+  height: 50px; 
+  background-color: white;
+  text-align: center;
+} 
+
+/* 9/14  */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px; 
+}
+
+nav li a {
+  display: inline-block;
+  color: maroon;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* 9/28 */
+nav a:link {
+  color: darkgoldenrod;
+}
+
+nav a:visited {
+  color: #0e2e61;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+nav a.active {
+  background-color:skyblue;
+  border-radius: 3px;
+  color:blanchedalmond;
+  margin-left: 16px;
+}
+
+/* 9/14 */
+#homehero {
+  height: 700px;
+  background-image: url(patrick-federi-alaska\ mountain\ range\ pic-unsplash.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative; 
+  object-fit: fill;
+  /* 9/21 */
+  /* background-attachment: fixed; */
+}
+
+#projecthero {
+  height: 600px;
+  background-image: url(Screen\ Shot\ 2023-09-29\ at\ 11.03.17\ PM.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative; 
+  object-fit: fill;
+}
+
+#educationhero {
+  height: 600px;
+  background-image: url(Screen\ Shot\ 2023-09-29\ at\ 11.08.32\ PM.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative; 
+  object-fit: fill;
+}
+
+#rhero {
+  height: 500px;
+  background-image: url(Screen\ Shot\ 2023-09-29\ at\ 11.05.10\ PM.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative; 
+  object-fit: fill;
+}
+
+#contacthero {
+  height: 500px;
+  background-image: url(tahoe\ pic.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative; 
+  object-fit: fill;
+}
+
+/* Container holding the image and the text */
+.imgcontainer {
+  position: relative;
+  text-align: center;
+  color: white; 
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* 9/19 */
+.twocontainer {
+  float: left;
+  width: 50%; /* three boxes (use 25% for four, and 50% for two, etc) */
+  padding: 10px; /* if you want space between the images */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both; /* content after the the twocontainer will be displayed withno float */
+}
+
+/* 9/19 */
+/* a rem unit is always relative to the root CSS font size */
+section {
+  padding: 2rem;
+}
+
+/* 9/19 */
+section.evenrow {
+  color: white;
+  background-color: steelblue; 
+}
+
+section.oddrow {
+  color: white;
+  background-color: steelblue; 
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+/* 9/28 */
+tr:nth-of-type(odd) {
+  background-color:lightblue;
+}
+
+object {
+  height: 700px;
+  width: 80%;
+}
+
+#myPdf {
+  /* Add the following styles to center the PDF */
+  display: block;
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 10px;
+}
+
+th {
+  /* removed 9/28 */
+  /* background-color: maroon; */
+  color: white;
+}
+
+form {
+  margin-right:auto;
+  margin-left:auto;
+  max-width: 50em;
+  width: 80%;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 12em 1fr;
+}
+
+/* Add a new style for the button container */
+.button-container {
+  /* display: flex;
+  justify-content: space-between; /* Space buttons evenly */ 
+  grid-column: 2; /* Make the form container span both columns */
+  display: flex;
+  flex-direction: row;
+}
+
+/* 9/19 */
+/* Style for both buttons */
+form input[type="submit"],
+form input[type="reset"] {
+  width: 35%; /* Set the width of both buttons */
+  margin-right: 10px;
+}
+
+/* 9/21 */
+footer {
+  background-color: #0e2e61;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0 0 10px 0;
+}
+
+.socialMediaLinks a {
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  width: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* 9/26 large display */
+@media screen and (min-width: 1025px) {
+  /* 9/21 */
+  /* logo created by https://app.logo.com/editor/ideas?_gl=1%2a2y52qt%2a_gcl_au%2aMTEwMzM0ODg2My4xNjk1MjU0OTEy%2a_ga%2aMTc0Mjg4MzU3LjE2OTUyNTQ5MTI.%2a_ga_8Y782WJ29W%2aMTY5NTI1NDkxMS4xLjEuMTY5NTI1NDkxMS42MC4wLjA.  */
+  /* .logo {
+    display: block;
+    float: left; /* Float the logo to the left */
+    margin-left: 10px; /* Add some left margin for spacing */
+    width: 100px;
+    height: 60px;
+    object-fit: fill;
+  }
+   */
+  #threecontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  section section{
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+  nav {
+    text-align: left;
+    padding-top: 20px;
+  }
+  
+  .hero {grid-area: hero; }
+  header {grid-area: header;}
+  nav {grid-area: nav; }
+  main {grid-area: main; }
+  footer {grid-area: footer; }
+
+  #wrapper {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      grid-template-areas:
+        "header header"
+        "nav hero"
+        "nav main"
+        "footer footer";
+  }
+}
