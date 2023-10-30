@@ -16,12 +16,16 @@ awesome/4.7.0/css/font-awesome.min.css">
       <h1>Natalie's Website</h1>
     </header>
     <nav>
+      <!-- For nav to change depending on device -->
+      <script>
+        function toggleNav() {
+          var nav = document.querySelector('nav');
+          nav.classList.toggle('active');
+        }
+      </script>
+      <button onclick="toggleNav()">☰ Menu</button>
       <ul>
         <li>
-          <!-- <a href='https://www.google.com/' target="_blank">Visit Google</a></li> -->
-        <!-- <a href='education.html'>Education</a> &nbsp; &nbsp;
-      <a href='project.html'>Projects</a> &nbsp; &nbsp;
-      <a href='contact.html'>Contact Me</a> &nbsp; &nbsp; -->
         <li><a href='index.html'>Home</a></li>
         <li><a href='education.html'>Education</a></li>
         <li><a class="active" href='projects.html'>Projects</a></li>
