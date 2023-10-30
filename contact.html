@@ -16,6 +16,14 @@ awesome/4.7.0/css/font-awesome.min.css">
       <h1>Natalie's Website</h1>
     </header>
     <nav>
+      <!-- For nav to change depending on device -->
+      <script>
+        function toggleNav() {
+          var nav = document.querySelector('nav');
+          nav.classList.toggle('active');
+        }
+      </script>
+      <button onclick="toggleNav()">☰ Menu</button>
       <ul>
         <li>
           <!-- <a href='https://www.google.com/' target="_blank">Visit Google</a></li> -->
@@ -43,8 +51,23 @@ awesome/4.7.0/css/font-awesome.min.css">
       <section class="oddrow" id="contact">
         <h1>Contact Me: </h1>
         <h5 align = "Center">All the * fields are required</h5>
-    <!-- Formatting the form in CSS -->
-    <form method = "POST">
+
+        <!-- For form submission -->
+        <script>
+          function validateForm() {
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+
+            if (fname.trim() === '' || lname.trim() === '') {
+              alert('Please fill out all required fields.');
+              return false;
+            }
+            return true;
+          }
+        </script>
+        
+        <!-- Formatting the form in CSS -->
+        <form method="POST" onsubmit="return validateForm()">
       <!-- Create First name -->
       <label for="fname">*First Name:</label>
       <!-- <input type="text" name="fname" id="fname" value="Enter your first name"> -->
